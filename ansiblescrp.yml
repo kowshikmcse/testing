@@ -1,0 +1,9 @@
+---
+- hosts: servers
+  user: root
+  become: true
+  tasks:
+  - name: installing git
+    yum: name=git state=installed
+  - name: installing nano editor
+    yum: name=nano state=installed
